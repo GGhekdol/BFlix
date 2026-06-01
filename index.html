@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BFlix - Anasayfa </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <h1>BFlix</h1>
+      <h2>Kim izliyor?</h2>
+      <div class="avatar">D</div>
+      <input id="nameInput" type="text" placeholder="Adını yaz..." />
+      <button id="enterSite">Siteye Gir</button>
+      <p>Netflix tarzı eğitim amaçlı örnek web sitesi.</p>
+    </div>
+  </div>
+
+  <div class="site" id="site">
+    <header class="navbar" id="navbar">
+      <div class="left">
+        <h1 class="logo">BFlix</h1>
+        <nav>
+          <a href="#">Ana Sayfa</a>
+          <a href="#popular">Popüler</a>
+          <a href="#trending">Trendler</a>
+          <a href="#new">Yeni Eklenenler</a>
+          <a href="#top">En Çok İzlenenler</a>
+          <a href="#series">Diziler</a>
+          <a href="#movies">Filmler</a>
+          <a href="#mylist">Listem</a>
+        </nav>
+      </div>
+      <div class="right">
+        <input id="searchInput" type="text" placeholder="Film veya dizi ara..." />
+        <button class="profile">D</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="tag">Bugünün Öne Çıkanı</span>
+        <h2>Interstellar</h2>
+        <p>İnsanlığın geleceğini kurtarmak için uzayın derinliklerine yapılan unutulmaz bir yolculuk.</p>
+        <div class="hero-buttons">
+          <button class="play" id="heroPlay">▶️ Oynat</button>
+          <button class="info" id="heroInfo">ⓘ Daha Fazla Bilgi</button>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="row" id="popular">
+        <h3>Popüler İçerikler</h3>
+        <div class="cards" id="popularCards"></div>
+      </section>
+
+      <section class="row" id="trending">
+        <h3>Trendler</h3>
+        <div class="cards" id="trendingCards"></div>
+      </section>
+
+      <section class="row" id="new">
+        <h3>Yeni Eklenenler</h3>
+        <div class="cards" id="newCards"></div>
+      </section>
+
+      <section class="row" id="top">
+        <h3>En Çok İzlenenler</h3>
+        <div class="cards" id="topCards"></div>
+      </section>
+
+      <section class="row" id="series">
+        <h3>Diziler</h3>
+        <div class="cards" id="seriesCards"></div>
+      </section>
+
+      <section class="row" id="movies">
+        <h3>Filmler</h3>
+        <div class="cards" id="movieCards"></div>
+      </section>
+
+      <section class="row" id="mylist">
+        <h3>Listem</h3>
+        <div class="cards" id="myListCards">
+          <p class="empty">Henüz listene bir şey eklemedin. Kartlardaki + butonuna bas.</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <button class="close" id="closeModal">×</button>
+        <div class="modal-hero">
+          <img id="modalImg" src="" alt="Film görseli" />
+          <div class="modal-gradient"></div>
+          <div class="modal-title-area">
+            <h2 id="modalTitle"></h2>
+            <div class="modal-actions">
+              <button class="play" id="modalPlay">▶️ Oynat</button>
+              <button class="circle-btn" id="modalAdd">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-text">
+          <div class="meta">
+            <span class="match">%98 eşleşme</span>
+            <span id="modalYear"></span>
+            <span id="modalType"></span>
+            <span>HD</span>
+          </div>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="watch-modal" id="watchModal">
+      <div class="watch-box">
+        <button class="close-watch" id="closeWatch">×</button>
+        <div class="fake-player">
+          <div class="play-icon">▶️</div>
+          <h2 id="watchTitle">Film oynatılıyor...</h2>
+          <p>Bu bölüm eğitim amaçlı örnek oynatma ekranıdır.</p>
+          <div class="progress"><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Bu site eğitim amacıyla hazırlanmış Netflix tarzı örnek bir film sitesi projesidir.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
